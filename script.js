@@ -56,3 +56,14 @@ if (heroVisual && !heroVisual.querySelector('.hero-character-caption')) {
   });
   heroVisual.appendChild(caption);
 }
+
+const aboutHeroText = [...document.querySelectorAll('.page-hero p')]
+  .find((paragraph) => paragraph.textContent.trim() === 'がんをひとりで抱えないために。安心して語り、正しく学び、次の一歩につながる場を地域の中につくっています。');
+
+if (aboutHeroText) {
+  aboutHeroText.innerHTML = 'がんをひとりで抱えないために。<br>安心して語り、正しく学び、次の一歩につながる場を地域の中につくっています。';
+  Object.assign(aboutHeroText.style, {
+    fontSize: 'clamp(1.18rem, 1.8vw, 1.35rem)',
+    lineHeight: '1.9'
+  });
+}
