@@ -29,3 +29,30 @@ if (trainingHeading) {
     `;
   }
 }
+
+const heroVisual = document.querySelector('.hero-visual');
+if (heroVisual && !heroVisual.querySelector('.hero-character-caption')) {
+  const caption = document.createElement('p');
+  caption.className = 'hero-character-caption';
+  caption.textContent = 'シャチホコ記念カフェ公式キャラクター「ハニカム君」';
+  Object.assign(caption.style, {
+    position: 'absolute',
+    left: '50%',
+    bottom: '4px',
+    transform: 'translateX(-50%)',
+    zIndex: '2',
+    margin: '0',
+    padding: '6px 12px',
+    width: 'max-content',
+    maxWidth: '95%',
+    borderRadius: '999px',
+    background: 'rgba(255,255,255,.92)',
+    color: '#173a63',
+    fontSize: '.82rem',
+    fontWeight: '700',
+    lineHeight: '1.5',
+    textAlign: 'center',
+    boxShadow: '0 8px 22px rgba(33,52,73,.10)'
+  });
+  heroVisual.appendChild(caption);
+}
