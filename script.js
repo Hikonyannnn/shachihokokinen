@@ -15,3 +15,17 @@ if (toggle && nav) {
     });
   });
 }
+
+const trainingHeading = [...document.querySelectorAll('h3')]
+  .find((heading) => heading.textContent.trim() === '主な研修・受賞');
+
+if (trainingHeading) {
+  const trainingList = trainingHeading.nextElementSibling;
+  if (trainingList?.tagName === 'UL') {
+    trainingList.innerHTML = `
+      <li>全がん連「がん教育外部講師eラーニング」修了</li>
+      <li>愛知県「がんのピア・サポーター養成講座」修了</li>
+      <li>日本癌治療学会学術集会 第56回PALプログラム 優秀ポスター賞など</li>
+    `;
+  }
+}
