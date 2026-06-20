@@ -19,12 +19,12 @@
 ## Cloudflare Pages で公開する設定
 
 1. Cloudflare の Workers & Pages を開く
-2. `Create application` → `Pages` → `Connect to Git`
-3. GitHub の `Hikonyannnn/shachihokokinen` を選択
+2. `Create application` → `Pages` → GitHubリポジトリの読み込み
+3. `Hikonyannnn/shachihokokinen` を選択
 4. Production branch: `main`
-5. Framework preset: `None`
-6. Build command: 空欄
-7. Build output directory: `/`
+5. Framework preset: なし
+6. Build command: `exit 0`
+7. Build output directory: `.`
 8. Deploy
 
 ## 正式公開前に差し替えるもの
