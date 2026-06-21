@@ -67,3 +67,10 @@ if (aboutHeroText) {
     lineHeight: '1.9'
   });
 }
+
+const prePublicationNote = [...document.querySelectorAll('p')]
+  .find((paragraph) => paragraph.textContent.trim() === '※開始時期や実績数は、正式公開前に最新情報へ更新します。');
+
+if (prePublicationNote) {
+  prePublicationNote.remove();
+}
